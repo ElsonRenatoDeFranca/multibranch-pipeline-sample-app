@@ -24,12 +24,25 @@ In this page you'll get the required url for webhook: JENKINS_URL/multibranch-we
 	    mytoken
 
 
-Criando webhook
+How to configure Webhook
 
 1- You have to configure your public ip. You can do this by using this command:
 
-https://whatismyipaddress.com/
-
 2- URL Webhook: http://localhost:8080//multibranch-webhook-trigger/invoke?token=mytoken
 
-3- Replace "localhost" by the your public IP described in the site.
+3- If you want to try to run Jenkins on localhost, you have to install ngrok: https://ngrok.com/download which expose localhost urls over internet.
+
+4- After installation of the ngrok, run the following command:
+  > ngrok http 8080
+  
+  The following output will be displayed:
+
+   Forwarding                    http://56e4074cc91a.ngrok.io -> http://localhost:8080 
+   Forwarding                    https://56e4074cc91a.ngrok.io -> http://localhost:8080
+
+5- Replace "localhost" by the url provided by ngrok. E.g.(http://56e4074cc91a.ngrok.io)
+
+It will become like this:
+
+http://56e4074cc91a.ngrok.io/multibranch-webhook-trigger/invoke?token=mytoken
+
