@@ -69,16 +69,18 @@ In order to enable the Continuous Integration/Continuous Deployment in your cont
 3- If you want to try to run Jenkins on localhost, you have to install ngrok: https://ngrok.com/download which expose localhost urls over internet.
 
 4- After installation of the ngrok, run the following command:
-  > ngrok http 8080
+  ``ngrok http 8080``
   
   The following output will be displayed:
 
-   Forwarding                    http://56e4074cc91a.ngrok.io -> http://localhost:8080 
-   Forwarding                    https://56e4074cc91a.ngrok.io -> http://localhost:8080
+   ``Forwarding http://56e4074cc91a.ngrok.io -> http://localhost:8080`` 
+   ``Forwarding https://56e4074cc91a.ngrok.io -> http://localhost:8080``
 
-5- Replace "localhost" by the url provided by ngrok. E.g.(http://56e4074cc91a.ngrok.io)
+5- Replace ``localhost`` by the url provided by ngrok. ``e.g.(http://56e4074cc91a.ngrok.io)``
 
 It will become like this:
 
 http://56e4074cc91a.ngrok.io/multibranch-webhook-trigger/invoke?token=mytoken
+
+NOTE: Every time you restart your local machine, you'll need to expose your public ip to Github again.
 
