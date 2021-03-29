@@ -6,7 +6,8 @@ pipeline{
      	
 		stage('Build'){
 			steps{
-				echo 'Building the application...'
+				echo 'Compiling the application...'
+				gradlew('clean', 'classes')
 			}
      		}
 		stage('Test'){
