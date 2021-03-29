@@ -7,7 +7,10 @@ pipeline{
 		stage('Build'){
 			steps{
 				echo 'Compiling the application....'
-				sh './gradlew clean build'
+				withGradle(){
+				  sh './gradlew -v'
+				  sh './gradlew clean build'
+				}
 
 			}
      		}
