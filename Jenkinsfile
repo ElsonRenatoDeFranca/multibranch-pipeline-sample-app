@@ -10,6 +10,9 @@ pipeline{
 			}
 		}
 		stage('Build'){
+			tools{
+			 gradle 'gradle6.8.3'
+			}
 			steps{
 				echo 'Compiling the application....'
 			}
