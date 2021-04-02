@@ -11,10 +11,11 @@ pipeline{
 		}
 		stage('Build'){
 			tools{
-			 gradle 'gradle6.8.3'
+			 gradle 'gradle6'
 			}
 			steps{
 				echo 'Compiling the application....'
+				sh 'gradle clean build'
 			}
      	}
 		stage('Test'){
