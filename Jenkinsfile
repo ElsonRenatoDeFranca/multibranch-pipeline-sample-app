@@ -4,11 +4,16 @@ pipeline{
    
    	stages{
      	
+		stage('Checkout code') {
+			steps {
+				checkout scm
+			}
+		}
 		stage('Build'){
 			steps{
 				echo 'Compiling the application....'
 			}
-     		}
+     	}
 		stage('Test'){
 			steps{
 				echo 'Testing the application...'
@@ -20,5 +25,5 @@ pipeline{
 				echo 'Deploying the application....'
 			}
 		}
-     	}
+     }
 }
